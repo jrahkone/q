@@ -1,7 +1,8 @@
 
+- query parameters to service (in payload)
+- error handling: write missing getters in values, or to err:{} property.
 
-- eval lists
-
+x eval lists
 x eval sub objects
 x lists
 x eval simple getters first
