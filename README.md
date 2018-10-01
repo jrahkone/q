@@ -48,8 +48,8 @@ public class MyBean {
 You can evaluate the query by:
 
 ```java
-Q q = Q.parse(jsonString); // or you can parse file: Q.parseFile(filename);
-q.eval(o); // Object o is the target where to query all fields in given query object.
+Q q = Q.parse(jsonString);  // or you can parse file: Q.parseFile(filename);
+q.eval(new MyBean());       // Target object bean should have all getters for data to be queried.
 String result = q.toJson(); // get result as json. Note: query object q is modified and contains the result.
 ```
 
