@@ -1,6 +1,10 @@
 
 - query parameters to service (in payload)
 - error handling: write missing getters in values, or to err:{} property.
+- mk build (just a shell script, no ant, no maven, no gradle)
+- more tests
+- more examples 
+- little more docs: install and using
 
 x eval lists
 x eval sub objects
