@@ -1,6 +1,6 @@
 # Q - simple java query template
 
-Example query:
+Example query (all values in json will be replaced with result values):
 
 ```json
 {
