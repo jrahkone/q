@@ -4,8 +4,8 @@ Example query:
 
 ```json
 {
-	"num":777,
-	"isOk":true,
+	"num":10,
+	"isOk":false,
 	"user":{
 		"firstName":"",
 		"lastName":"",
@@ -14,6 +14,34 @@ Example query:
 	"docs":[ 
 		{"title":""}
 	]
+}
+```
+
+Target object (bean) should have corresponding getters for data:
+
+```java
+public class MyBean {
+	public int getNum() {return 777;}
+	public boolean getIsOk() {return true;}
+	class User {
+		public String getFirstName() {return "fname1";}
+		public String getLastName() {return "lname1";}
+		public String getEmail() {return "email1";}
+	}
+	public User getUser() { return new User();}
+	class Doc {
+		int id;
+		Doc(int id){this.id=id;}
+		public String getTitle() {return "title"+id;}
+	}
+	
+	public List<Doc> getDocs() {
+		List<Doc> res = new ArrayList<Doc>();
+		res.add(new Doc(1));
+		res.add(new Doc(2));
+		res.add(new Doc(3));
+		return res;
+	}
 }
 ```
 
