@@ -1,0 +1,14 @@
+# simple syntax for query and how to send query payload to each service in process
+
+query
+  user
+    fname
+    lname
+    email
+  docs[]
+    title
+    num:i # default type is string, i=long integer
+	ok:b  # b=boolean
+
+# then we need service end points and the order the payload travels and which objects to fetch 
+
