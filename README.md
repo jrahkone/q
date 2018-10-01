@@ -1,4 +1,4 @@
-# Q - simple java query template
+# Q - simple query template for java
 
 Example query (all values in json will be replaced with result values):
 
