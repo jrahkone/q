@@ -1,4 +1,4 @@
-package com.captam;
+package fi.captam;
 
 /*
  *  Copyright 2018 Jukka-Pekka Rahkonen

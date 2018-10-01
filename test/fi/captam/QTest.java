@@ -1,4 +1,4 @@
-package com.captam;
+package fi.captam;
 
 /*
  *  Copyright 2018 Jukka-Pekka Rahkonen
@@ -21,7 +21,8 @@ import java.util.List;
 
 import org.junit.Test;
 
-import com.captam.Q.Buf;
+import fi.captam.Q;
+import fi.captam.Q.Buf;
 
 public class QTest {
 

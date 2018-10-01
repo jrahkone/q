@@ -1,4 +1,4 @@
-package com.captam;
+package fi.captam;
 
 /*
  *  Copyright 2018 Jukka-Pekka Rahkonen
@@ -16,6 +16,8 @@ package com.captam;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import fi.captam.Q;
 
 public class TestService {
 
