@@ -1,0 +1,11 @@
+{
+	"field1":"",
+	"num1":777,
+	"bool1":false,
+	"user":{
+		"firstName":"",
+		"lastName":"",
+		"email":""
+	},
+	"docs":[ {"title":""},{"foobar":"this second item is just a template and will be", "ignored":3333} ]
+}

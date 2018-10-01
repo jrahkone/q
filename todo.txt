@@ -1,0 +1,12 @@
+
+
+- eval lists
+
+x eval sub objects
+x lists
+x eval simple getters first
+x struct
+x syntax json
+x parser
+
+

@@ -1,0 +1,11 @@
+{
+	"user":{
+		"firstName":"",
+		"lastName":"",
+		"email":""
+	},
+	"num":100,
+	"float":-100.01,
+	"bool":false,
+	"one":null
+}
