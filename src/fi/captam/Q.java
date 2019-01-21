@@ -81,7 +81,7 @@ public class Q {
 		return value;
 	}
 	
-	void parse(Buf b){
+	public Q parse(Buf b){
 		b.trim(); b.expect('{');
 		while (true) {
 			b.trim();
@@ -90,27 +90,28 @@ public class Q {
 			b.expect(',');
 		}
 		b.expect('}');
+		return this;
 	}
 	
-	static Q parse(String s) { Q q=new Q(); Buf b = new Buf(s); q.parse(b); return q;}
-	static Q parseFile(String fname) throws Exception {
+	public static Q parse(String s) { Q q=new Q(); Buf b = new Buf(s); q.parse(b); return q;}
+	public static Q parseFile(String fname) throws Exception {
 		 byte[] encoded = Files.readAllBytes(Paths.get(fname));
 		 String s = new String(encoded, Charset.forName("UTF-8"));
 		 return parse(s);
 	}
 	
-	static class Buf {
+	public static class Buf {
 		int idx = 0; int len;
 		String s;
-		Buf(String s){this.s=s;len=s.length();}
- 		void trim() { while(idx<len && Character.isWhitespace(s.charAt(idx))) { idx++;}}
- 		void expect(char ch) {if(ch!=s.charAt(idx)) fail("expected:"+ch+" but was:"+s.charAt(idx));idx++;}
- 		boolean is(char ch) {return is(0,ch);}
- 		boolean is(int i, char ch) {return s.charAt(idx+i)==ch;}
- 		char peek(int i) {return s.charAt(idx+i);}
- 		void next(int i) {idx+=i;}
- 		void next() {next(1);}
- 		String until(char ch) {
+		public Buf(String s){this.s=s;len=s.length();}
+ 		public void trim() { while(idx<len && Character.isWhitespace(s.charAt(idx))) { idx++;}}
+ 		public void expect(char ch) {if(ch!=s.charAt(idx)) fail("expected:"+ch+" but was:"+s.charAt(idx));idx++;}
+ 		public boolean is(char ch) {return is(0,ch);}
+ 		public boolean is(int i, char ch) {return s.charAt(idx+i)==ch;}
+ 		public char peek(int i) {return s.charAt(idx+i);}
+ 		public void next(int i) {idx+=i;}
+ 		public void next() {next(1);}
+ 		public String until(char ch) {
  			String res="";
  			while (true) {
  				if (idx>=len) break;
@@ -120,7 +121,7 @@ public class Q {
  			}
  			return res;
  		}
- 		boolean match(String str) {
+ 		public boolean match(String str) {
  			for (int i=0;i<str.length();i++) { if (s.charAt(idx+i)!=str.charAt(i)) return false;}
  			idx+=str.length(); return true;
  		}
